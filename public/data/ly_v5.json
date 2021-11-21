@@ -1,0 +1,3522 @@
+{
+    "version": "1.0",
+    "lastEdit": "",
+    "nodes": [
+        {
+            "id": 1,
+            "title": "进入大学",
+            "color": "#57669c",
+            "earliestTime": 0,
+            "latestTime": 0,
+            "maxAppearanceTimes": 1,
+            "weight": 1,
+            "prerequisites": true,
+            "text": "高考结束。\n你满怀期待地进入大学，开启了自己新的人生篇章...",
+            "effects": [],
+            "selections": []
+        },
+        {
+            "id": 2,
+            "title": "大一上",
+            "color": "#b8e986",
+            "earliestTime": 0,
+            "latestTime": 3,
+            "maxAppearanceTimes": 1,
+            "weight": 1,
+            "prerequisites": true,
+            "text": "你加入了学院的新生交流群，里面有各个年级的同学。\n大家聊的如火如荼。\n你也在思考是否加入与陌生人的交流...",
+            "effects": [],
+            "selections": [
+                {
+                    "prerequisites": true,
+                    "text": "积极水群",
+                    "effects": [],
+                    "connectTo": 3
+                },
+                {
+                    "prerequisites": true,
+                    "text": "默不作声",
+                    "effects": []
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "title": "广结良友",
+            "color": "#4a90e2",
+            "earliestTime": 2,
+            "latestTime": 6,
+            "maxAppearanceTimes": 2,
+            "weight": 1,
+            "prerequisites": true,
+            "text": "性格开朗活跃的你给其他人留下深刻的印象。\n也因此结识了很多朋友...",
+            "effects": [
+                {
+                    "possibility": 100,
+                    "assignment": [
+                        "$人缘",
+                        "+=",
+                        1
+                    ]
+                },
+                {
+                    "possibility": 100,
+                    "assignment": [
+                        "$魅力",
+                        "+=",
+                        1
+                    ]
+                }
+            ],
+            "selections": []
+        },
+        {
+            "id": 4,
+            "title": "大一上",
+            "color": "#b8e986",
+            "earliestTime": 0,
+            "latestTime": 4,
+            "maxAppearanceTimes": 1,
+            "weight": 1,
+            "prerequisites": true,
+            "text": "军训期间，班级是暂时分配的。\n每个班需要一个代理班长...",
+            "effects": [],
+            "selections": []
+        },
+        {
+            "id": 5,
+            "title": "成功当选",
+            "color": "#4a90e2",
+            "earliestTime": 0,
+            "latestTime": 48,
+            "maxAppearanceTimes": false,
+            "weight": 1,
+            "prerequisites": [
+                [
+                    "$人缘",
+                    ">=",
+                    1
+                ],
+                "AND",
+                [
+                    "$竞选",
+                    "==",
+                    1
+                ]
+            ],
+            "text": "恭喜！\n你成功当选。",
+            "effects": [
+                {
+                    "possibility": 80,
+                    "assignment": [
+                        "$人缘",
+                        "+=",
+                        1
+                    ]
+                },
+                {
+                    "possibility": 100,
+                    "assignment": [
+                        "$工作能力",
+                        "+=",
+                        1
+                    ]
+                }
+            ],
+            "selections": [],
+            "connectTo": 6
+        },
+        {
+            "id": 6,
+            "title": "竞选失败",
+            "color": "#4a90e2",
+            "earliestTime": 0,
+            "latestTime": 48,
+            "maxAppearanceTimes": false,
+            "weight": 1,
+            "prerequisites": [
+                "$人缘",
+                "<",
+                1
+            ],
+            "text": "很遗憾。\n票数过少，竞选失败。",
+            "effects": [
+                {
+                    "possibility": 100,
+                    "assignment": [
+                        "$概率",
+                        "=",
+                        0
+                    ]
+                },
+                {
+                    "possibility": 100,
+                    "assignment": [
+                        "$竞选",
+                        "=",
+                        0
+                    ]
+                }
+            ],
+            "selections": []
+        },
+        {
+            "id": 7,
+            "title": "大一上",
+            "color": "#b8e986",
+            "earliestTime": 0,
+            "latestTime": 4,
+            "maxAppearanceTimes": 1,
+            "weight": 0,
+            "prerequisites": true,
+            "text": "专业分流，进行分班考试。\n你大概知道考试范围，你要复习吗？",
+            "effects": [],
+            "selections": [
+                {
+                    "prerequisites": true,
+                    "text": "复习",
+                    "effects": []
+                },
+                {
+                    "prerequisites": true,
+                    "text": "不复习",
+                    "effects": []
+                }
+            ]
+        },
+        {
+            "id": 8,
+            "title": "大一上",
+            "color": "#b8e986",
+            "earliestTime": 0,
+            "latestTime": 4,
+            "maxAppearanceTimes": 1,
+            "weight": 1,
+            "prerequisites": true,
+            "text": "专业分流。\n要进行分班考试，一部分专业需要考试进入。\n你是否想进入这些专业？",
+            "effects": [],
+            "selections": [
+                {
+                    "prerequisites": true,
+                    "text": "想",
+                    "effects": [],
+                    "directTo": 7
+                },
+                {
+                    "prerequisites": true,
+                    "text": "不想",
+                    "effects": []
+                }
+            ]
+        },
+        {
+            "id": 9,
+            "title": "大一上",
+            "color": "#b8e986",
+            "earliestTime": 3,
+            "latestTime": 5,
+            "maxAppearanceTimes": 1,
+            "weight": 1,
+            "prerequisites": true,
+            "text": "在专业分流后。\n班级人员变动较大，此时需要重新选举班委...",
+            "effects": [],
+            "selections": []
+        },
+        {
+            "id": 11,
+            "title": "活动",
+            "color": "#50e3c2",
+            "earliestTime": 2,
+            "latestTime": 6,
+            "maxAppearanceTimes": 1,
+            "weight": 1,
+            "prerequisites": true,
+            "text": "某天下午，你匆匆吃完晚饭。\n在食堂门口，你被一个同学拦了下来，原来他是学生会的干事，在为活动做宣传。\n他/她塞给你一张传单，只见上面五个字非常显眼：\n学生会纳新。",
+            "effects": [],
+            "selections": [
+                {
+                    "prerequisites": true,
+                    "text": "想加入",
+                    "effects": [],
+                    "directTo": 38
+                },
+                {
+                    "prerequisites": true,
+                    "text": "没兴趣",
+                    "effects": []
+                }
+            ]
+        },
+        {
+            "id": 12,
+            "title": "大一上",
+            "color": "#b8e986",
+            "earliestTime": 0,
+            "latestTime": 6,
+            "maxAppearanceTimes": 1,
+            "weight": 1,
+            "prerequisites": true,
+            "text": "你在深夜思考自己的未来。\n初入大学，所有人都告诉你在大学里绩点很重要。\n但你觉得...",
+            "effects": [],
+            "selections": [
+                {
+                    "prerequisites": true,
+                    "text": "绩点重要，想争取保研机会",
+                    "effects": [
+                        {
+                            "possibility": 60,
+                            "assignment": [
+                                "$绩点",
+                                "+=",
+                                1
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "prerequisites": true,
+                    "text": "夸大其词，绩点不应在大学生活的首位",
+                    "effects": []
+                }
+            ]
+        },
+        {
+            "id": 14,
+            "title": "事件",
+            "color": "#fc966e",
+            "earliestTime": 4,
+            "latestTime": 48,
+            "maxAppearanceTimes": 10,
+            "weight": 0.5,
+            "prerequisites": true,
+            "text": "今天有课。\n你应该早起去占前排的座位吗？",
+            "effects": [],
+            "selections": [
+                {
+                    "prerequisites": true,
+                    "text": "起床！",
+                    "effects": [
+                        {
+                            "possibility": 25,
+                            "assignment": [
+                                "$绩点",
+                                "+=",
+                                1
+                            ]
+                        },
+                        {
+                            "possibility": 25,
+                            "assignment": [
+                                "$复习进度",
+                                "+=",
+                                1
+                            ]
+                        }
+                    ],
+                    "directTo": 28
+                },
+                {
+                    "prerequisites": true,
+                    "text": "摆烂！",
+                    "effects": [
+                        {
+                            "possibility": 40,
+                            "assignment": [
+                                "$绩点",
+                                "+=",
+                                -1
+                            ]
+                        }
+                    ],
+                    "directTo": 94
+                }
+            ]
+        },
+        {
+            "id": 15,
+            "title": "活动",
+            "color": "#50e3c2",
+            "earliestTime": 0,
+            "latestTime": 1,
+            "maxAppearanceTimes": 1,
+            "weight": 0.25,
+            "prerequisites": [
+                0,
+                "==",
+                0
+            ],
+            "text": "中秋节是上古天象崇拜——敬月习俗的遗痕，自古便有祭月、赏月等民俗，流传至今，经久不息。\n学院组织了中秋晚会...",
+            "effects": [],
+            "selections": [
+                {
+                    "prerequisites": true,
+                    "text": "参加",
+                    "effects": [
+                        {
+                            "possibility": 90,
+                            "assignment": [
+                                "$魅力",
+                                "+=",
+                                1
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "prerequisites": true,
+                    "text": "不参加",
+                    "effects": []
+                }
+            ]
+        },
+        {
+            "id": 16,
+            "title": "参与活动",
+            "color": "#4a90e2",
+            "earliestTime": 0,
+            "latestTime": 48,
+            "maxAppearanceTimes": 8,
+            "weight": 1,
+            "prerequisites": [
+                "$人缘",
+                ">=",
+                1
+            ],
+            "text": "你才华横溢，风采动人，一展本领，俘获众人倾心。",
+            "effects": [
+                {
+                    "possibility": 80,
+                    "assignment": [
+                        "$人缘",
+                        "+=",
+                        1
+                    ]
+                },
+                {
+                    "possibility": 100,
+                    "assignment": [
+                        "$工作能力",
+                        "+=",
+                        1
+                    ]
+                },
+                {
+                    "possibility": 90,
+                    "assignment": [
+                        "$魅力",
+                        "+=",
+                        1
+                    ]
+                }
+            ],
+            "selections": [],
+            "connectTo": 6
+        },
+        {
+            "id": 17,
+            "title": "事件",
+            "color": "#fc966e",
+            "earliestTime": 1,
+            "latestTime": 48,
+            "maxAppearanceTimes": 10,
+            "weight": 0.5,
+            "prerequisites": true,
+            "text": "今天没课。\n你应该早起去图书馆学习吗？",
+            "effects": [],
+            "selections": [
+                {
+                    "prerequisites": true,
+                    "text": "起床！",
+                    "effects": [
+                        {
+                            "possibility": 75,
+                            "assignment": [
+                                "$绩点",
+                                "+=",
+                                1
+                            ]
+                        },
+                        {
+                            "possibility": 50,
+                            "assignment": [
+                                "$复习进度",
+                                "+=",
+                                2
+                            ]
+                        }
+                    ],
+                    "directTo": 28
+                },
+                {
+                    "prerequisites": true,
+                    "text": "摆烂！",
+                    "effects": [
+                        {
+                            "possibility": 10,
+                            "assignment": [
+                                "$绩点",
+                                "+=",
+                                -1
+                            ]
+                        }
+                    ],
+                    "directTo": 94
+                }
+            ]
+        },
+        {
+            "id": 18,
+            "title": "事件",
+            "color": "#fc966e",
+            "earliestTime": 2,
+            "latestTime": 36,
+            "maxAppearanceTimes": 4,
+            "weight": 0.8,
+            "prerequisites": true,
+            "text": "你发现自己很久没有背过单词了...",
+            "effects": [],
+            "selections": [
+                {
+                    "prerequisites": true,
+                    "text": "背单词！",
+                    "effects": [
+                        {
+                            "possibility": 90,
+                            "assignment": [
+                                "$四级",
+                                "+=",
+                                1
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "prerequisites": true,
+                    "text": "摆烂！",
+                    "effects": [
+                        {
+                            "possibility": 50,
+                            "assignment": [
+                                "$四级",
+                                "=",
+                                0
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 19,
+            "title": "事件",
+            "color": "#fc966e",
+            "earliestTime": 1,
+            "latestTime": 1,
+            "maxAppearanceTimes": 1,
+            "weight": 0.25,
+            "prerequisites": [
+                [
+                    "$单身",
+                    "==",
+                    0
+                ],
+                "AND",
+                [
+                    "$钱包",
+                    ">=",
+                    1000
+                ]
+            ],
+            "text": "国庆节到了。\n与你异地恋的男/女朋友想借着这个假期和你见面...",
+            "effects": [],
+            "selections": [
+                {
+                    "prerequisites": true,
+                    "text": "我去找他/她",
+                    "effects": [
+                        {
+                            "possibility": 100,
+                            "assignment": [
+                                "$感情",
+                                "+=",
+                                2
+                            ]
+                        },
+                        {
+                            "possibility": 50,
+                            "assignment": [
+                                "$感情",
+                                "+=",
+                                1
+                            ]
+                        },
+                        {
+                            "possibility": 100,
+                            "assignment": [
+                                "$钱包",
+                                "+=",
+                                -1000
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "prerequisites": true,
+                    "text": "他/她来找我",
+                    "effects": [
+                        {
+                            "possibility": 60,
+                            "assignment": [
+                                "$感情",
+                                "+=",
+                                2
+                            ]
+                        },
+                        {
+                            "possibility": 100,
+                            "assignment": [
+                                "$钱包",
+                                "+=",
+                                -500
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 20,
+            "title": "活动",
+            "color": "#50e3c2",
+            "earliestTime": 2,
+            "latestTime": 36,
+            "maxAppearanceTimes": 4,
+            "weight": 0.5,
+            "prerequisites": true,
+            "text": "“真理越辩越明。”\n辩论赛如期而至...",
+            "effects": [
+                {
+                    "possibility": 100,
+                    "assignment": [
+                        "$活动",
+                        "+=",
+                        1
+                    ]
+                },
+                {
+                    "possibility": 80,
+                    "assignment": [
+                        "$人缘",
+                        "+=",
+                        1
+                    ]
+                },
+                {
+                    "possibility": 50,
+                    "assignment": [
+                        "$魅力",
+                        "+=",
+                        1
+                    ]
+                }
+            ],
+            "selections": []
+        },
+        {
+            "id": 21,
+            "title": "无力回天",
+            "color": "#4a90e2",
+            "earliestTime": 2,
+            "latestTime": 48,
+            "maxAppearanceTimes": false,
+            "weight": 0,
+            "prerequisites": [
+                "$感情",
+                "<",
+                3
+            ],
+            "text": "你痛苦万分，难以接受。\n不断尝试、极力挽回，但最终无力回天。\n带着遗憾回到学校。",
+            "effects": [
+                {
+                    "possibility": 100,
+                    "assignment": [
+                        "$单身",
+                        "=",
+                        1
+                    ]
+                },
+                {
+                    "possibility": 90,
+                    "assignment": [
+                        "$魅力",
+                        "+=",
+                        -1
+                    ]
+                },
+                {
+                    "possibility": 100,
+                    "assignment": [
+                        "$感情",
+                        "=",
+                        0
+                    ]
+                }
+            ],
+            "selections": []
+        },
+        {
+            "id": 23,
+            "title": "事件",
+            "color": "#fc966e",
+            "earliestTime": 4,
+            "latestTime": 48,
+            "maxAppearanceTimes": 3,
+            "weight": 0.3,
+            "prerequisites": [
+                [
+                    "$单身",
+                    "==",
+                    0
+                ],
+                "AND",
+                [
+                    "$感情",
+                    "<",
+                    5
+                ]
+            ],
+            "text": "他/她向你提出分手。\n没有解释、没有原因、没有余地。",
+            "effects": [
+                {
+                    "possibility": 100,
+                    "assignment": [
+                        "$单身",
+                        "=",
+                        1
+                    ]
+                }
+            ],
+            "selections": [
+                {
+                    "prerequisites": true,
+                    "text": "十分痛苦",
+                    "effects": [],
+                    "directTo": 21
+                },
+                {
+                    "prerequisites": true,
+                    "text": "无所谓的",
+                    "effects": [],
+                    "directTo": 71
+                }
+            ]
+        },
+        {
+            "id": 24,
+            "title": "事件",
+            "color": "#fc966e",
+            "earliestTime": 4,
+            "latestTime": 48,
+            "maxAppearanceTimes": 4,
+            "weight": 1,
+            "prerequisites": [
+                [
+                    "$单身",
+                    "==",
+                    1
+                ],
+                "AND",
+                [
+                    "$谈过女朋友",
+                    "==",
+                    1
+                ]
+            ],
+            "text": "他/她向你提出复合。\n希望你能原谅他/她之前的草率和轻浮。",
+            "effects": [],
+            "selections": [
+                {
+                    "prerequisites": true,
+                    "text": "接受",
+                    "effects": [
+                        {
+                            "possibility": 100,
+                            "assignment": [
+                                "$单身",
+                                "=",
+                                0
+                            ]
+                        },
+                        {
+                            "possibility": 100,
+                            "assignment": [
+                                "$感情",
+                                "+=",
+                                2
+                            ]
+                        },
+                        {
+                            "possibility": 50,
+                            "assignment": [
+                                "$感情",
+                                "+=",
+                                5
+                            ]
+                        }
+                    ],
+                    "directTo": 73
+                },
+                {
+                    "prerequisites": true,
+                    "text": "不接受",
+                    "effects": [],
+                    "directTo": 71
+                }
+            ]
+        },
+        {
+            "id": 25,
+            "title": "促膝长谈",
+            "color": "#4a90e2",
+            "earliestTime": 0,
+            "latestTime": 48,
+            "maxAppearanceTimes": 8,
+            "weight": 1,
+            "prerequisites": [
+                "$单身",
+                "==",
+                0
+            ],
+            "text": "你和他/她深入交流，促膝长谈。\nget到了彼此内心当中最深处的想法。",
+            "effects": [
+                {
+                    "possibility": 100,
+                    "assignment": [
+                        "$感情",
+                        "+=",
+                        1
+                    ]
+                },
+                {
+                    "possibility": 50,
+                    "assignment": [
+                        "$感情",
+                        "+=",
+                        3
+                    ]
+                }
+            ],
+            "selections": []
+        },
+        {
+            "id": 26,
+            "title": "事件",
+            "color": "#fc966e",
+            "earliestTime": 3,
+            "latestTime": 3,
+            "maxAppearanceTimes": 1,
+            "weight": 1,
+            "prerequisites": true,
+            "text": "距离期末考试还剩一个月时间。",
+            "effects": [],
+            "selections": [
+                {
+                    "prerequisites": true,
+                    "text": "开始复习",
+                    "effects": [
+                        {
+                            "possibility": 80,
+                            "assignment": [
+                                "$复习进度",
+                                "+=",
+                                1
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "prerequisites": true,
+                    "text": "不急",
+                    "effects": []
+                }
+            ]
+        },
+        {
+            "id": 27,
+            "title": "大一上",
+            "color": "#b8e986",
+            "earliestTime": 1,
+            "latestTime": 6,
+            "maxAppearanceTimes": 1,
+            "weight": 1,
+            "prerequisites": true,
+            "text": "经历了一段时间的大学生活，你发现各个专业都和你高中所设想的有很大出入：\n计算机并不是修电脑的、能动并不是烧锅炉的，文科、社科类专业也过的并不轻松。",
+            "effects": [],
+            "selections": [
+                {
+                    "prerequisites": true,
+                    "text": "我对当前专业很满意",
+                    "effects": [
+                        {
+                            "possibility": 50,
+                            "assignment": [
+                                "$绩点",
+                                "+=",
+                                1
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "prerequisites": true,
+                    "text": "我对当前专业不满意",
+                    "effects": []
+                },
+                {
+                    "prerequisites": true,
+                    "text": "无所谓的，摆了",
+                    "effects": [
+                        {
+                            "possibility": 60,
+                            "assignment": [
+                                "$绩点",
+                                "=",
+                                0
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 28,
+            "title": "闻鸡起舞",
+            "color": "#4a90e2",
+            "earliestTime": 2,
+            "latestTime": 48,
+            "maxAppearanceTimes": 15,
+            "weight": 0.6,
+            "prerequisites": true,
+            "text": "早上七点，闹钟响起。\n你按掉闹钟，经过数千层的心理博弈，最终起了床。\n“摆烂的人生又有什么意义呢？”",
+            "effects": [
+                {
+                    "possibility": 60,
+                    "assignment": [
+                        "$绩点",
+                        "+=",
+                        1
+                    ]
+                },
+                {
+                    "possibility": 20,
+                    "assignment": [
+                        "$魅力",
+                        "+=",
+                        1
+                    ]
+                }
+            ],
+            "selections": []
+        },
+        {
+            "id": 29,
+            "title": "天道酬勤",
+            "color": "#4a90e2",
+            "earliestTime": 4,
+            "latestTime": 4,
+            "maxAppearanceTimes": 1,
+            "weight": 5,
+            "prerequisites": [
+                "$复习进度",
+                ">=",
+                2
+            ],
+            "text": "期末考试结束。\n你的成绩非常好，这并不值得惊讶。\n天道酬勤从来都不是贬义词，你的付出值得你拿到这样的结局。",
+            "effects": [
+                {
+                    "possibility": 100,
+                    "assignment": [
+                        "$绩点",
+                        "+=",
+                        2
+                    ]
+                },
+                {
+                    "possibility": 50,
+                    "assignment": [
+                        "$绩点",
+                        "+=",
+                        2
+                    ]
+                }
+            ],
+            "selections": []
+        },
+        {
+            "id": 30,
+            "title": "理所当然",
+            "color": "#4a90e2",
+            "earliestTime": 4,
+            "latestTime": 4,
+            "maxAppearanceTimes": 1,
+            "weight": 5,
+            "prerequisites": [
+                "$复习进度",
+                "<=",
+                1
+            ],
+            "text": "期末考试结束。\n你的成绩很差劲，但你心安理得。\n“本来就没有好好复习，考不好不是很正常吗？”",
+            "effects": [],
+            "selections": []
+        },
+        {
+            "id": 31,
+            "title": "天道不酬勤",
+            "color": "#4a90e2",
+            "earliestTime": 4,
+            "latestTime": 4,
+            "maxAppearanceTimes": 1,
+            "weight": 2,
+            "prerequisites": [
+                "$复习进度",
+                ">=",
+                1
+            ],
+            "text": "期末考试结束。\n你的成绩很差劲，你很不能理解。\n明明如此刻苦，却没有像童话故事中那样得到happy ending。",
+            "effects": [],
+            "selections": []
+        },
+        {
+            "id": 32,
+            "title": "放假",
+            "color": "#57669c",
+            "earliestTime": 5,
+            "latestTime": 5,
+            "maxAppearanceTimes": 1,
+            "weight": 100,
+            "prerequisites": true,
+            "text": "放假了。\n一个学期匆匆过去。\n放下压力，给自己一点喘息的时间吧。",
+            "effects": [
+                {
+                    "possibility": 100,
+                    "assignment": [
+                        "$复习进度",
+                        "=",
+                        0
+                    ]
+                }
+            ],
+            "selections": []
+        },
+        {
+            "id": 33,
+            "title": "新学期开始",
+            "color": "#57669c",
+            "earliestTime": 6,
+            "latestTime": 6,
+            "maxAppearanceTimes": 1,
+            "weight": 100,
+            "prerequisites": true,
+            "text": "开学了。\n假期的时光总是很短暂。\n你舍不得每个自然醒的早晨，舍不得老家的饭菜，舍不得故乡的挚友，舍不得没有压力的假期...\n但时间永不停歇，背上行囊，开启新的学期。",
+            "effects": [
+                {
+                    "possibility": 100,
+                    "assignment": [
+                        "$复习进度",
+                        "=",
+                        0
+                    ]
+                },
+                {
+                    "possibility": 100,
+                    "assignment": [
+                        "$钱包",
+                        "=",
+                        2000
+                    ]
+                }
+            ],
+            "selections": []
+        },
+        {
+            "id": 34,
+            "title": "事件：疫情爆发",
+            "color": "#fc966e",
+            "earliestTime": 6,
+            "latestTime": 12,
+            "maxAppearanceTimes": 1,
+            "weight": 0.1,
+            "prerequisites": [
+                "$疫情",
+                "==",
+                0
+            ],
+            "text": "一场突如其来的疫情席卷世界。传播速度快、感染范围广、防控难度大。\n学校发布通知，延迟开校，尚在家的你无法返校。",
+            "effects": [
+                {
+                    "possibility": 100,
+                    "assignment": [
+                        "$疫情",
+                        "=",
+                        1
+                    ]
+                }
+            ],
+            "selections": []
+        },
+        {
+            "id": 35,
+            "title": "转专业",
+            "color": "#b8e986",
+            "earliestTime": 6,
+            "latestTime": 8,
+            "maxAppearanceTimes": 1,
+            "weight": 100,
+            "prerequisites": [
+                "$转专业",
+                "==",
+                0
+            ],
+            "text": "QQ消息提示音响起，是班群里的通知。\n原来转专业通知下发了。\n通过考试和面试、排名靠前的人就能转入自己心怡的专业。",
+            "effects": [],
+            "selections": [],
+            "directTo": 36
+        },
+        {
+            "id": 36,
+            "title": "大一下",
+            "color": "#b8e986",
+            "earliestTime": 6,
+            "latestTime": 8,
+            "maxAppearanceTimes": 1,
+            "weight": 0,
+            "prerequisites": true,
+            "text": "如今转专业的机会就在眼前，你必须考虑这是否是你此生仅有的机会。",
+            "effects": [],
+            "selections": [
+                {
+                    "prerequisites": [
+                        "$绩点",
+                        ">",
+                        3
+                    ],
+                    "text": "转！\n重铸人生荣光，我辈义不容辞",
+                    "effects": [
+                        {
+                            "possibility": 60,
+                            "assignment": [
+                                "$概率",
+                                "=",
+                                1
+                            ]
+                        },
+                        {
+                            "possibility": 100,
+                            "assignment": [
+                                "$参加",
+                                "=",
+                                1
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "prerequisites": true,
+                    "text": "算了，顺利毕业就算成功",
+                    "effects": [
+                        {
+                            "possibility": 100,
+                            "assignment": [
+                                "$参加",
+                                "=",
+                                0
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 38,
+            "title": "积极准备",
+            "color": "#4a90e2",
+            "earliestTime": 0,
+            "latestTime": 48,
+            "maxAppearanceTimes": false,
+            "weight": 0,
+            "prerequisites": true,
+            "text": "“从不打无准备的仗！”\n你悉心准备，还询问学长学姐相关的信息，付出十二分的努力。",
+            "effects": [
+                {
+                    "possibility": 100,
+                    "assignment": [
+                        "$参加学生会",
+                        "=",
+                        1
+                    ]
+                },
+                {
+                    "possibility": 75,
+                    "assignment": [
+                        "$概率",
+                        "=",
+                        1
+                    ]
+                }
+            ],
+            "selections": [],
+            "directTo": 82
+        },
+        {
+            "id": 39,
+            "title": "事件：考试取消",
+            "color": "#fc966e",
+            "earliestTime": 4,
+            "latestTime": 4,
+            "maxAppearanceTimes": 1,
+            "weight": 1,
+            "prerequisites": [
+                "$疫情",
+                "==",
+                1
+            ],
+            "text": "笔试取消了！",
+            "effects": [],
+            "selections": []
+        },
+        {
+            "id": 40,
+            "title": "转专业成功",
+            "color": "#4a90e2",
+            "earliestTime": 10,
+            "latestTime": 12,
+            "maxAppearanceTimes": 1,
+            "weight": 1,
+            "prerequisites": [
+                [
+                    "$概率",
+                    "==",
+                    1
+                ],
+                "AND",
+                [
+                    "$参加",
+                    "==",
+                    1
+                ]
+            ],
+            "text": "面试结果出来了！\n你的名字出现在了拟录取的名单上，是的，你成功了。\n准备开始新的路程吧！",
+            "effects": [
+                {
+                    "possibility": 100,
+                    "assignment": [
+                        "$概率",
+                        "=",
+                        0
+                    ]
+                },
+                {
+                    "possibility": 100,
+                    "assignment": [
+                        "$转专业",
+                        "=",
+                        1
+                    ]
+                },
+                {
+                    "possibility": 100,
+                    "assignment": [
+                        "$参加",
+                        "=",
+                        0
+                    ]
+                }
+            ],
+            "selections": []
+        },
+        {
+            "id": 41,
+            "title": "转专业失败",
+            "color": "#4a90e2",
+            "earliestTime": 10,
+            "latestTime": 12,
+            "maxAppearanceTimes": 1,
+            "weight": 1,
+            "prerequisites": [
+                [
+                    "$概率",
+                    "==",
+                    0
+                ],
+                "AND",
+                [
+                    "$参加",
+                    "==",
+                    1
+                ]
+            ],
+            "text": "面试结果出来了。\n你把拟录取名单翻看多遍，也没能找到自己的名字。\n窗外的乌云挡住了阳光，你也知道，你失败了。",
+            "effects": [
+                {
+                    "possibility": 100,
+                    "assignment": [
+                        "$转专业",
+                        "=",
+                        0
+                    ]
+                },
+                {
+                    "possibility": 100,
+                    "assignment": [
+                        "$概率",
+                        "=",
+                        0
+                    ]
+                },
+                {
+                    "possibility": 100,
+                    "assignment": [
+                        "$参加",
+                        "=",
+                        0
+                    ]
+                }
+            ],
+            "selections": []
+        },
+        {
+            "id": 42,
+            "title": "事件",
+            "color": "#fc966e",
+            "earliestTime": 5,
+            "latestTime": 12,
+            "maxAppearanceTimes": 1,
+            "weight": 1,
+            "prerequisites": true,
+            "text": "在一次学校组织的活动中，你认识了同学A。\n但你并不知道ta的性别，从ta的QQ界面初步判断，你认为ta是个女同学。\n“要跟ta继续聊下去吗？”你想",
+            "effects": [],
+            "selections": [
+                {
+                    "prerequisites": true,
+                    "text": "继续聊下去",
+                    "effects": [
+                        {
+                            "possibility": 100,
+                            "assignment": [
+                                "$同学A",
+                                "=",
+                                1
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "prerequisites": true,
+                    "text": "不感兴趣",
+                    "effects": [
+                        {
+                            "possibility": 100,
+                            "assignment": [
+                                "$同学A",
+                                "=",
+                                0
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 43,
+            "title": "事件",
+            "color": "#fc966e",
+            "earliestTime": 4,
+            "latestTime": 4,
+            "maxAppearanceTimes": 1,
+            "weight": 1,
+            "prerequisites": [
+                "$疫情",
+                "==",
+                1
+            ],
+            "text": "疫情原因无法返校，期末考试推迟至下学期开始。",
+            "effects": [],
+            "selections": []
+        },
+        {
+            "id": 44,
+            "title": "事件：疫情缓和",
+            "color": "#fc966e",
+            "earliestTime": 15,
+            "latestTime": 24,
+            "maxAppearanceTimes": 1,
+            "weight": 1,
+            "prerequisites": [
+                "$疫情",
+                "==",
+                1
+            ],
+            "text": "国家高度重视，迅速行动，疫情得到控制，生活逐渐步入正轨。",
+            "effects": [
+                {
+                    "possibility": 100,
+                    "assignment": [
+                        "$疫情",
+                        "=",
+                        0
+                    ]
+                }
+            ],
+            "selections": []
+        },
+        {
+            "id": 46,
+            "title": "保研无望",
+            "color": "#4a90e2",
+            "earliestTime": 6,
+            "latestTime": 36,
+            "maxAppearanceTimes": 3,
+            "weight": 1,
+            "prerequisites": [
+                "$绩点",
+                "<",
+                3
+            ],
+            "text": "你反复刷新教务网站，看着自己不忍直视的绩点。\n是的，你的成绩很差劲。\n奖学金与你无关，保研也和你毫无关系。",
+            "effects": [
+                {
+                    "possibility": 100,
+                    "assignment": [
+                        "$人缘",
+                        "+=",
+                        1
+                    ]
+                }
+            ],
+            "selections": []
+        },
+        {
+            "id": 47,
+            "title": "柳暗花明",
+            "color": "#4a90e2",
+            "earliestTime": 6,
+            "latestTime": 36,
+            "maxAppearanceTimes": 1,
+            "weight": 1,
+            "prerequisites": [
+                "$绩点",
+                ">=",
+                3
+            ],
+            "text": "你反复刷新教务网站，不敢相信自己的眼睛。\n成绩不错！\n宁静下来后，你重新分析了自己的排名，尚在保研边缘，仍有一战之力！",
+            "effects": [
+                {
+                    "possibility": 100,
+                    "assignment": [
+                        "$人缘",
+                        "+=",
+                        1
+                    ]
+                }
+            ],
+            "selections": []
+        },
+        {
+            "id": 48,
+            "title": "事件",
+            "color": "#fc966e",
+            "earliestTime": 7,
+            "latestTime": 35,
+            "maxAppearanceTimes": 2,
+            "weight": 1,
+            "prerequisites": [
+                "$绩点",
+                "<=",
+                2
+            ],
+            "text": "你确信以现在的成绩已经不可能保研了。\n生活还要继续，该上的课还是得上，可是——\n“反正总要考研，这些课认真与否似乎都不重要了，是吗？”",
+            "effects": [],
+            "selections": [
+                {
+                    "prerequisites": true,
+                    "text": "依然认真对待每一门课",
+                    "effects": [
+                        {
+                            "possibility": 100,
+                            "assignment": [
+                                "$绩点",
+                                "+=",
+                                1
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "prerequisites": true,
+                    "text": "没必要了，说什么我都开摆",
+                    "effects": []
+                }
+            ]
+        },
+        {
+            "id": 49,
+            "title": "事件",
+            "color": "#fc966e",
+            "earliestTime": 4,
+            "latestTime": 36,
+            "maxAppearanceTimes": 4,
+            "weight": 0.25,
+            "prerequisites": true,
+            "text": "这些日子没有什么大事，时间悄悄从指尖溜走。",
+            "effects": [],
+            "selections": []
+        },
+        {
+            "id": 50,
+            "title": "事件",
+            "color": "#fc966e",
+            "earliestTime": 4,
+            "latestTime": 42,
+            "maxAppearanceTimes": 4,
+            "weight": 0.5,
+            "prerequisites": true,
+            "text": "打牌。\n打牌。\n打牌。\n你啊你，你怎么能如此堕落！先前订下的学习计划你都忘了吗？子曰：“吾日三省吾身。”不能再这样下去了！\n打牌...",
+            "effects": [
+                {
+                    "possibility": 30,
+                    "assignment": [
+                        "$钱包",
+                        "+=",
+                        200
+                    ]
+                },
+                {
+                    "possibility": 10,
+                    "assignment": [
+                        "$钱包",
+                        "+=",
+                        -100
+                    ]
+                },
+                {
+                    "possibility": 10,
+                    "assignment": [
+                        "$绩点",
+                        "+=",
+                        -1
+                    ]
+                },
+                {
+                    "possibility": 30,
+                    "assignment": [
+                        "$人缘",
+                        "+=",
+                        1
+                    ]
+                }
+            ],
+            "selections": []
+        },
+        {
+            "id": 51,
+            "title": "事件",
+            "color": "#fc966e",
+            "earliestTime": 4,
+            "latestTime": 42,
+            "maxAppearanceTimes": 4,
+            "weight": 0.5,
+            "prerequisites": true,
+            "text": "大片上映季。\n复仇者联盟5、加勒比海盗6、碟中谍7...\n你和同学每周末都相约去看电影。",
+            "effects": [
+                {
+                    "possibility": 100,
+                    "assignment": [
+                        "$钱包",
+                        "+=",
+                        -100
+                    ]
+                },
+                {
+                    "possibility": 50,
+                    "assignment": [
+                        "$人缘",
+                        "+=",
+                        1
+                    ]
+                },
+                {
+                    "possibility": 30,
+                    "assignment": [
+                        "$魅力",
+                        "+=",
+                        1
+                    ]
+                }
+            ],
+            "selections": []
+        },
+        {
+            "id": 52,
+            "title": "赌神",
+            "color": "#4a90e2",
+            "earliestTime": 7,
+            "latestTime": 35,
+            "maxAppearanceTimes": 2,
+            "weight": 0.2,
+            "prerequisites": true,
+            "text": "每天晚上都和朋友相约斗地主。\n这个月已经赢了三百多块了！",
+            "effects": [
+                {
+                    "possibility": 100,
+                    "assignment": [
+                        "$钱包",
+                        "+=",
+                        300
+                    ]
+                },
+                {
+                    "possibility": 30,
+                    "assignment": [
+                        "$绩点",
+                        "+=",
+                        -1
+                    ]
+                }
+            ],
+            "selections": []
+        },
+        {
+            "id": 53,
+            "title": "四级考试通过",
+            "color": "#4a90e2",
+            "earliestTime": 12,
+            "latestTime": 24,
+            "maxAppearanceTimes": 2,
+            "weight": 0,
+            "prerequisites": [
+                [
+                    "$四级",
+                    ">=",
+                    1
+                ],
+                "AND",
+                [
+                    "$四级",
+                    "<",
+                    600
+                ]
+            ],
+            "text": "So easy！\n“四级有手就行。”你逢人就说。\n全世界都知道你通过了英语四级考试。",
+            "effects": [
+                {
+                    "possibility": 100,
+                    "assignment": [
+                        "$四级",
+                        "=",
+                        600
+                    ]
+                }
+            ],
+            "selections": []
+        },
+        {
+            "id": 54,
+            "title": "四级考试挂了",
+            "color": "#4a90e2",
+            "earliestTime": 12,
+            "latestTime": 24,
+            "maxAppearanceTimes": 1,
+            "weight": 0,
+            "prerequisites": [
+                [
+                    "$四级",
+                    "==",
+                    0
+                ],
+                "AND",
+                [
+                    "$四级",
+                    "<",
+                    600
+                ]
+            ],
+            "text": "你打开网站一查，这成绩单没有瑕疵。\n整整齐齐的每行上都写着“英语四级考试”几个字。\n你横竖睡不着，仔细看了半夜，才从字缝里看出字来，满本都写着两个字是“没过”！",
+            "effects": [],
+            "selections": []
+        },
+        {
+            "id": 55,
+            "title": "事件",
+            "color": "#fc966e",
+            "earliestTime": 14,
+            "latestTime": 36,
+            "maxAppearanceTimes": 2,
+            "weight": 1,
+            "prerequisites": [
+                [
+                    "$四级",
+                    ">=",
+                    600
+                ],
+                "AND",
+                [
+                    "$六级",
+                    "==",
+                    0
+                ]
+            ],
+            "text": "四级考试对你来说小菜一碟，你也轻松通过。\n学长学姐告诉你：“四级并不代表什么，六级高分才是硬实力。”\n但是学校的毕业要求仅限于四级通过，那么六级？",
+            "effects": [],
+            "selections": [
+                {
+                    "prerequisites": true,
+                    "text": "当然要考",
+                    "effects": [
+                        {
+                            "possibility": 20,
+                            "assignment": [
+                                "$六级",
+                                "+=",
+                                1
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "prerequisites": true,
+                    "text": "算了",
+                    "effects": []
+                }
+            ]
+        },
+        {
+            "id": 56,
+            "title": "大二上",
+            "color": "#b8e986",
+            "earliestTime": 12,
+            "latestTime": 14,
+            "maxAppearanceTimes": false,
+            "weight": 1,
+            "prerequisites": [
+                "$转专业",
+                "==",
+                1
+            ],
+            "text": "你转入了新的专业。",
+            "effects": [],
+            "selections": []
+        },
+        {
+            "id": 59,
+            "title": "事件",
+            "color": "#fc966e",
+            "earliestTime": 5,
+            "latestTime": 18,
+            "maxAppearanceTimes": 1,
+            "weight": 1,
+            "prerequisites": [
+                "$同学A",
+                "==",
+                1
+            ],
+            "text": "你得知同学A与三个即将毕业的在一个寝室，而他们毕业就会搬出去。",
+            "effects": [],
+            "selections": []
+        },
+        {
+            "id": 60,
+            "title": "事件",
+            "color": "#fc966e",
+            "earliestTime": 13,
+            "latestTime": 30,
+            "maxAppearanceTimes": 1,
+            "weight": 0.2,
+            "prerequisites": [
+                "$同学A",
+                "==",
+                1
+            ],
+            "text": "宿舍生存环境很差。\n室友打呼噜的声音用耳塞都无法缓解。\n你每天都睡不好。\n你不能再这样下去了！",
+            "effects": [
+                {
+                    "possibility": 100,
+                    "assignment": [
+                        "$寝室矛盾",
+                        "=",
+                        1
+                    ]
+                }
+            ],
+            "selections": [
+                {
+                    "prerequisites": [
+                        "$同学A",
+                        "==",
+                        1
+                    ],
+                    "text": "和同学A商量，等他室友搬走你就搬过去。",
+                    "effects": []
+                },
+                {
+                    "prerequisites": true,
+                    "text": "在表白墙上寻找舍友",
+                    "effects": []
+                },
+                {
+                    "prerequisites": true,
+                    "text": "忍气吞声，不换宿舍",
+                    "effects": []
+                }
+            ]
+        },
+        {
+            "id": 61,
+            "title": "活动",
+            "color": "#50e3c2",
+            "earliestTime": 14,
+            "latestTime": 15,
+            "maxAppearanceTimes": 1,
+            "weight": 0.5,
+            "prerequisites": true,
+            "text": "英雄联盟全球总决赛。\n学校电竞社组织了集体观赛。\n最近正好是万圣节。",
+            "effects": [],
+            "selections": [
+                {
+                    "prerequisites": true,
+                    "text": "去看看",
+                    "effects": [
+                        {
+                            "possibility": 50,
+                            "assignment": [
+                                "$魅力",
+                                "+=",
+                                1
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "prerequisites": true,
+                    "text": "不感兴趣",
+                    "effects": [
+                        {
+                            "possibility": 10,
+                            "assignment": [
+                                "$魅力",
+                                "+=",
+                                -1
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 62,
+            "title": "事件",
+            "color": "#fc966e",
+            "earliestTime": 15,
+            "latestTime": 30,
+            "maxAppearanceTimes": 2,
+            "weight": 0.3,
+            "prerequisites": [
+                "$魅力",
+                ">=",
+                5
+            ],
+            "text": "在回宿舍的路上。\n你低头玩着手机，恍惚间觉得有人轻拍了你的肩膀。\n他/她塞给你一颗糖，腼腆的转过身去，正打算离开。",
+            "effects": [],
+            "selections": [
+                {
+                    "prerequisites": true,
+                    "text": "愣在原地",
+                    "effects": [],
+                    "directTo": 64
+                },
+                {
+                    "prerequisites": true,
+                    "text": "把握机会",
+                    "effects": [
+                        {
+                            "possibility": 100,
+                            "assignment": [
+                                "$偶遇",
+                                "=",
+                                1
+                            ]
+                        }
+                    ],
+                    "directTo": 63
+                },
+                {
+                    "prerequisites": true,
+                    "text": "不以为然",
+                    "effects": [],
+                    "directTo": 65
+                }
+            ]
+        },
+        {
+            "id": 63,
+            "title": "要联系方式",
+            "color": "#4a90e2",
+            "earliestTime": 0,
+            "latestTime": 48,
+            "maxAppearanceTimes": 1,
+            "weight": 0,
+            "prerequisites": true,
+            "text": "你坚信他/她就是你的真命天子。\n快步上前，向他/她询问联系方式。",
+            "effects": [],
+            "selections": []
+        },
+        {
+            "id": 64,
+            "title": "楞在原地",
+            "color": "#4a90e2",
+            "earliestTime": 0,
+            "latestTime": 48,
+            "maxAppearanceTimes": 1,
+            "weight": 0,
+            "prerequisites": true,
+            "text": "你不知所措。\n在几秒内，大脑飞速运转，此时你的大脑宛如天河二号，处理着天文数字般繁杂的信息。\n宕机了。\n你从没有这么丢过神，这是第一次，再回过神来，一切都晚了。",
+            "effects": [],
+            "selections": [
+                {
+                    "prerequisites": true,
+                    "text": "去表白墙寻人",
+                    "effects": [
+                        {
+                            "possibility": 100,
+                            "assignment": [
+                                "$偶遇",
+                                "=",
+                                1
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "prerequisites": true,
+                    "text": "过去的就让它过去吧",
+                    "effects": [
+                        {
+                            "possibility": 100,
+                            "assignment": [
+                                "$偶遇",
+                                "=",
+                                0
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 65,
+            "title": "不以为然",
+            "color": "#4a90e2",
+            "earliestTime": 0,
+            "latestTime": 48,
+            "maxAppearanceTimes": 1,
+            "weight": 0,
+            "prerequisites": true,
+            "text": "这是要干什么？\n你不理解，也不打算去理解，甚至根本不想理解。\n“关我什么事呢？”\n你重新回到自己的思绪上，仿佛刚才的一切都没有发生过。",
+            "effects": [
+                {
+                    "possibility": 100,
+                    "assignment": [
+                        "$偶遇",
+                        "=",
+                        0
+                    ]
+                }
+            ],
+            "selections": []
+        },
+        {
+            "id": 66,
+            "title": "事件",
+            "color": "#fc966e",
+            "earliestTime": 15,
+            "latestTime": 30,
+            "maxAppearanceTimes": 1,
+            "weight": 0.25,
+            "prerequisites": true,
+            "text": "你很喜欢这学期的一些课程，买了很多相关的书籍，但是大多没有用。",
+            "effects": [],
+            "selections": [
+                {
+                    "prerequisites": true,
+                    "text": "我要卖掉它们",
+                    "effects": [],
+                    "directTo": 67
+                },
+                {
+                    "prerequisites": true,
+                    "text": "留着吧",
+                    "effects": []
+                }
+            ]
+        },
+        {
+            "id": 67,
+            "title": "事件",
+            "color": "#fc966e",
+            "earliestTime": 24,
+            "latestTime": 16,
+            "maxAppearanceTimes": 1,
+            "weight": 0.25,
+            "prerequisites": [
+                "$偶遇",
+                "==",
+                0
+            ],
+            "text": "你要卖掉一些用不到的书，并且很轻松的找到了合适的买家，是异性。\n双方如约的在约定的地方完成了交易。\n你对他/她并没有印象。",
+            "effects": [
+                {
+                    "possibility": 60,
+                    "assignment": [
+                        "$偶遇",
+                        "=",
+                        1
+                    ]
+                }
+            ],
+            "selections": []
+        },
+        {
+            "id": 68,
+            "title": "事件",
+            "color": "#fc966e",
+            "earliestTime": 18,
+            "latestTime": 30,
+            "maxAppearanceTimes": 2,
+            "weight": 0.5,
+            "prerequisites": [
+                "$表白",
+                "==",
+                0
+            ],
+            "text": "你同班同学告诉你，有个异性对你很有好感。\n你旁敲侧击，大概猜出了他/她是谁。",
+            "effects": [],
+            "selections": [
+                {
+                    "prerequisites": true,
+                    "text": "和他/她拉近关系，主动交流",
+                    "effects": [
+                        {
+                            "possibility": 100,
+                            "assignment": [
+                                "$暧昧",
+                                "=",
+                                1
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "prerequisites": true,
+                    "text": "不感兴趣",
+                    "effects": [
+                        {
+                            "possibility": 100,
+                            "assignment": [
+                                "$暧昧",
+                                "=",
+                                0
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 69,
+            "title": "事件",
+            "color": "#fc966e",
+            "earliestTime": 18,
+            "latestTime": 30,
+            "maxAppearanceTimes": 2,
+            "weight": 0.5,
+            "prerequisites": [
+                [
+                    "$表白",
+                    "==",
+                    0
+                ],
+                "AND",
+                [
+                    [
+                        "$偶遇",
+                        "==",
+                        1
+                    ],
+                    "OR",
+                    [
+                        "$暧昧",
+                        "==",
+                        1
+                    ]
+                ]
+            ],
+            "text": "你觉得他/她很好。\n你能明显的感觉到，他/她也对你的态度有别于其他人。",
+            "effects": [],
+            "selections": [
+                {
+                    "prerequisites": true,
+                    "text": "他/她喜欢我",
+                    "effects": []
+                },
+                {
+                    "prerequisites": true,
+                    "text": "我自作多情",
+                    "effects": [
+                        {
+                            "possibility": 50,
+                            "assignment": [
+                                "$暧昧",
+                                "=",
+                                0
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 70,
+            "title": "事件",
+            "color": "#fc966e",
+            "earliestTime": 18,
+            "latestTime": 30,
+            "maxAppearanceTimes": 2,
+            "weight": 0.5,
+            "prerequisites": [
+                [
+                    "$表白",
+                    "==",
+                    0
+                ],
+                "AND",
+                [
+                    [
+                        "$偶遇",
+                        "==",
+                        1
+                    ],
+                    "OR",
+                    [
+                        "$暧昧",
+                        "==",
+                        1
+                    ]
+                ]
+            ],
+            "text": "他/她的所作所为几乎明示了：\n他/她喜欢你。",
+            "effects": [],
+            "selections": []
+        },
+        {
+            "id": 71,
+            "title": "单身贵族",
+            "color": "#4a90e2",
+            "earliestTime": 0,
+            "latestTime": 48,
+            "maxAppearanceTimes": 8,
+            "weight": 0.2,
+            "prerequisites": [
+                [
+                    "$单身",
+                    "==",
+                    1
+                ],
+                "AND",
+                [
+                    "$谈过女朋友",
+                    "==",
+                    1
+                ]
+            ],
+            "text": "你因为自己单身而暗自高兴：\n不用受所谓爱情的折磨了。",
+            "effects": [],
+            "selections": []
+        },
+        {
+            "id": 72,
+            "title": "事件",
+            "color": "#fc966e",
+            "earliestTime": 18,
+            "latestTime": 32,
+            "maxAppearanceTimes": 2,
+            "weight": 0.5,
+            "prerequisites": [
+                [
+                    "$表白",
+                    "==",
+                    0
+                ],
+                "AND",
+                [
+                    [
+                        "$偶遇",
+                        "==",
+                        1
+                    ],
+                    "OR",
+                    [
+                        "$暧昧",
+                        "==",
+                        1
+                    ]
+                ]
+            ],
+            "text": "你们聊的很开心，似乎两情相悦。\n两人谁也没捅破那层窗户纸。",
+            "effects": [],
+            "selections": [
+                {
+                    "prerequisites": true,
+                    "text": "主动表白",
+                    "effects": [
+                        {
+                            "possibility": 50,
+                            "assignment": [
+                                "$概率",
+                                "=",
+                                1
+                            ]
+                        },
+                        {
+                            "possibility": 100,
+                            "assignment": [
+                                "$表白",
+                                "=",
+                                1
+                            ]
+                        }
+                    ],
+                    "directTo": 113
+                },
+                {
+                    "prerequisites": true,
+                    "text": "守株待兔",
+                    "effects": [
+                        {
+                            "possibility": 100,
+                            "assignment": [
+                                "$表白",
+                                "=",
+                                0
+                            ]
+                        },
+                        {
+                            "possibility": 20,
+                            "assignment": [
+                                "$概率",
+                                "=",
+                                1
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 73,
+            "title": "谈恋爱",
+            "color": "#4a90e2",
+            "earliestTime": 0,
+            "latestTime": 48,
+            "maxAppearanceTimes": false,
+            "weight": 0,
+            "prerequisites": [
+                [
+                    "$单身",
+                    "==",
+                    1
+                ],
+                "AND",
+                [
+                    "$概率",
+                    "==",
+                    1
+                ]
+            ],
+            "text": "你不再是单身了。\n从此，你不再会被好兄弟嘲讽了。",
+            "effects": [
+                {
+                    "possibility": 100,
+                    "assignment": [
+                        "$单身",
+                        "=",
+                        0
+                    ]
+                },
+                {
+                    "possibility": 100,
+                    "assignment": [
+                        "$概率",
+                        "=",
+                        0
+                    ]
+                },
+                {
+                    "possibility": 100,
+                    "assignment": [
+                        "$表白",
+                        "=",
+                        0
+                    ]
+                },
+                {
+                    "possibility": 100,
+                    "assignment": [
+                        "$偶遇",
+                        "=",
+                        0
+                    ]
+                },
+                {
+                    "possibility": 100,
+                    "assignment": [
+                        "$暧昧",
+                        "=",
+                        0
+                    ]
+                }
+            ],
+            "selections": [],
+            "directTo": 75
+        },
+        {
+            "id": 74,
+            "title": "可惜",
+            "color": "#4a90e2",
+            "earliestTime": 20,
+            "latestTime": 30,
+            "maxAppearanceTimes": 2,
+            "weight": 0.2,
+            "prerequisites": [
+                [
+                    "$表白",
+                    "==",
+                    0
+                ],
+                "AND",
+                [
+                    [
+                        "$偶遇",
+                        "==",
+                        1
+                    ],
+                    "AND",
+                    [
+                        "$暧昧",
+                        "==",
+                        1
+                    ]
+                ]
+            ],
+            "text": "那个他/她找到了对象，你向他/她送去了祝福。\n“没关系，过了这村还能再没这店？”你内心苦涩。",
+            "effects": [],
+            "selections": []
+        },
+        {
+            "id": 75,
+            "title": "被拒绝",
+            "color": "#4a90e2",
+            "earliestTime": 0,
+            "latestTime": 48,
+            "maxAppearanceTimes": false,
+            "weight": 0,
+            "prerequisites": [
+                [
+                    "$表白",
+                    "==",
+                    1
+                ],
+                "AND",
+                [
+                    "$概率",
+                    "==",
+                    0
+                ]
+            ],
+            "text": "他/她拒绝了你的表白。\n你十分痛苦，以泪洗面。",
+            "effects": [
+                {
+                    "possibility": 100,
+                    "assignment": [
+                        "$概率",
+                        "=",
+                        0
+                    ]
+                },
+                {
+                    "possibility": 10,
+                    "assignment": [
+                        "$绩点",
+                        "+=",
+                        -1
+                    ]
+                },
+                {
+                    "possibility": 100,
+                    "assignment": [
+                        "$表白",
+                        "=",
+                        0
+                    ]
+                },
+                {
+                    "possibility": 100,
+                    "assignment": [
+                        "$偶遇",
+                        "=",
+                        0
+                    ]
+                },
+                {
+                    "possibility": 100,
+                    "assignment": [
+                        "$暧昧",
+                        "=",
+                        0
+                    ]
+                }
+            ],
+            "selections": []
+        },
+        {
+            "id": 76,
+            "title": "大二下",
+            "color": "#b8e986",
+            "earliestTime": 20,
+            "latestTime": 24,
+            "maxAppearanceTimes": 1,
+            "weight": 1,
+            "prerequisites": true,
+            "text": "大学生活已经过了快两年了。",
+            "effects": [],
+            "selections": []
+        },
+        {
+            "id": 77,
+            "title": "焦虑",
+            "color": "#4a90e2",
+            "earliestTime": 13,
+            "latestTime": 36,
+            "maxAppearanceTimes": 2,
+            "weight": 0.5,
+            "prerequisites": true,
+            "text": "看着同窗要么成绩拔群，要么项目众多，你开始为自己的未来担心。",
+            "effects": [],
+            "selections": []
+        },
+        {
+            "id": 78,
+            "title": "事件",
+            "color": "#fc966e",
+            "earliestTime": 25,
+            "latestTime": 30,
+            "maxAppearanceTimes": 1,
+            "weight": 0.25,
+            "prerequisites": true,
+            "text": "一个偶然的机会，你得知一个研究生正在招本科生科研助理，这是个好机会。",
+            "effects": [],
+            "selections": [
+                {
+                    "prerequisites": true,
+                    "text": "毛遂自荐",
+                    "effects": []
+                },
+                {
+                    "prerequisites": true,
+                    "text": "不感兴趣",
+                    "effects": []
+                }
+            ]
+        },
+        {
+            "id": 79,
+            "title": "事件",
+            "color": "#fc966e",
+            "earliestTime": 20,
+            "latestTime": 30,
+            "maxAppearanceTimes": 1,
+            "weight": 0.25,
+            "prerequisites": true,
+            "text": "你常常在课余时间逛B站。",
+            "effects": [],
+            "selections": [],
+            "directTo": 80
+        },
+        {
+            "id": 80,
+            "title": "事件",
+            "color": "#fc966e",
+            "earliestTime": 26,
+            "latestTime": 32,
+            "maxAppearanceTimes": 1,
+            "weight": 0.25,
+            "prerequisites": true,
+            "text": "你偶然看到一个虚拟偶像的视频，你很疑惑。",
+            "effects": [],
+            "selections": [
+                {
+                    "prerequisites": true,
+                    "text": "了解一下",
+                    "effects": []
+                },
+                {
+                    "prerequisites": true,
+                    "text": "划走",
+                    "effects": []
+                }
+            ]
+        },
+        {
+            "id": 81,
+            "title": "六级考试挂了",
+            "color": "#4a90e2",
+            "earliestTime": 18,
+            "latestTime": 30,
+            "maxAppearanceTimes": 2,
+            "weight": 0,
+            "prerequisites": [
+                [
+                    "$四级",
+                    ">=",
+                    600
+                ],
+                "AND",
+                [
+                    "$六级",
+                    "==",
+                    0
+                ]
+            ],
+            "text": "命运女神没有把好运赠予你。\n英语六级，没过。\n不过这也对你毕业没有任何影响。",
+            "effects": [
+                {
+                    "possibility": 100,
+                    "assignment": [
+                        "$人缘",
+                        "+=",
+                        1
+                    ]
+                }
+            ],
+            "selections": []
+        },
+        {
+            "id": 82,
+            "title": "成功加入",
+            "color": "#4a90e2",
+            "earliestTime": 0,
+            "latestTime": 48,
+            "maxAppearanceTimes": false,
+            "weight": 0,
+            "prerequisites": [
+                [
+                    "$人缘",
+                    ">=",
+                    2
+                ],
+                "AND",
+                [
+                    "$概率",
+                    "==",
+                    1
+                ]
+            ],
+            "text": "恭喜！",
+            "effects": [
+                {
+                    "possibility": 80,
+                    "assignment": [
+                        "$人缘",
+                        "+=",
+                        1
+                    ]
+                },
+                {
+                    "possibility": 100,
+                    "assignment": [
+                        "$工作能力",
+                        "+=",
+                        1
+                    ]
+                }
+            ],
+            "selections": [],
+            "directTo": 83
+        },
+        {
+            "id": 83,
+            "title": "加入失败",
+            "color": "#4a90e2",
+            "earliestTime": 0,
+            "latestTime": 48,
+            "maxAppearanceTimes": false,
+            "weight": 0,
+            "prerequisites": [
+                "$人缘",
+                "<",
+                2
+            ],
+            "text": "很遗憾",
+            "effects": [
+                {
+                    "possibility": 100,
+                    "assignment": [
+                        "$概率",
+                        "=",
+                        0
+                    ]
+                },
+                {
+                    "possibility": 100,
+                    "assignment": [
+                        "$参加学生会",
+                        "=",
+                        0
+                    ]
+                }
+            ],
+            "selections": []
+        },
+        {
+            "id": 87,
+            "title": "事件",
+            "color": "#fc966e",
+            "earliestTime": 13,
+            "latestTime": 13,
+            "maxAppearanceTimes": 1,
+            "weight": 0.25,
+            "prerequisites": [
+                "$单身",
+                "==",
+                0
+            ],
+            "text": "国庆节到了。\n与你异地恋的男/女朋友想借着这个假期和你见面...",
+            "effects": [],
+            "selections": [
+                {
+                    "prerequisites": true,
+                    "text": "我去找他/她",
+                    "effects": [
+                        {
+                            "possibility": 100,
+                            "assignment": [
+                                "$感情",
+                                "+=",
+                                1
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "prerequisites": true,
+                    "text": "他/她来找我",
+                    "effects": [
+                        {
+                            "possibility": 60,
+                            "assignment": [
+                                "$感情",
+                                "+=",
+                                1
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 88,
+            "title": "事件",
+            "color": "#fc966e",
+            "earliestTime": 25,
+            "latestTime": 25,
+            "maxAppearanceTimes": 1,
+            "weight": 0.25,
+            "prerequisites": [
+                "$单身",
+                "==",
+                0
+            ],
+            "text": "国庆节到了。\n与你异地恋的男/女朋友想借着这个假期和你见面...",
+            "effects": [],
+            "selections": [
+                {
+                    "prerequisites": true,
+                    "text": "我去找他/她",
+                    "effects": [
+                        {
+                            "possibility": 100,
+                            "assignment": [
+                                "$感情",
+                                "+=",
+                                1
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "prerequisites": true,
+                    "text": "他/她来找我",
+                    "effects": [
+                        {
+                            "possibility": 60,
+                            "assignment": [
+                                "$感情",
+                                "+=",
+                                1
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 89,
+            "title": "事件",
+            "color": "#fc966e",
+            "earliestTime": 37,
+            "latestTime": 37,
+            "maxAppearanceTimes": 1,
+            "weight": 0.25,
+            "prerequisites": [
+                "$单身",
+                "==",
+                0
+            ],
+            "text": "国庆节到了。\n与你异地恋的男/女朋友想借着这个假期和你见面...",
+            "effects": [],
+            "selections": [
+                {
+                    "prerequisites": true,
+                    "text": "我去找他/她",
+                    "effects": [
+                        {
+                            "possibility": 100,
+                            "assignment": [
+                                "$感情",
+                                "+=",
+                                1
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "prerequisites": true,
+                    "text": "他/她来找我",
+                    "effects": [
+                        {
+                            "possibility": 60,
+                            "assignment": [
+                                "$感情",
+                                "+=",
+                                1
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 90,
+            "title": "活动",
+            "color": "#50e3c2",
+            "earliestTime": 12,
+            "latestTime": 13,
+            "maxAppearanceTimes": 1,
+            "weight": 0.25,
+            "prerequisites": [
+                0,
+                "==",
+                0
+            ],
+            "text": "中秋节是上古天象崇拜——敬月习俗的遗痕，自古便有祭月、赏月等民俗，流传至今，经久不息。\n学院组织了中秋晚会...",
+            "effects": [],
+            "selections": [
+                {
+                    "prerequisites": true,
+                    "text": "参加",
+                    "effects": [
+                        {
+                            "possibility": 90,
+                            "assignment": [
+                                "$魅力",
+                                "+=",
+                                1
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "prerequisites": true,
+                    "text": "不参加",
+                    "effects": []
+                }
+            ]
+        },
+        {
+            "id": 91,
+            "title": "活动",
+            "color": "#50e3c2",
+            "earliestTime": 24,
+            "latestTime": 25,
+            "maxAppearanceTimes": 1,
+            "weight": 0.25,
+            "prerequisites": [
+                0,
+                "==",
+                0
+            ],
+            "text": "中秋节是上古天象崇拜——敬月习俗的遗痕，自古便有祭月、赏月等民俗，流传至今，经久不息。\n学院组织了中秋晚会...",
+            "effects": [],
+            "selections": [
+                {
+                    "prerequisites": true,
+                    "text": "参加",
+                    "effects": [
+                        {
+                            "possibility": 90,
+                            "assignment": [
+                                "$魅力",
+                                "+=",
+                                1
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "prerequisites": true,
+                    "text": "不参加",
+                    "effects": []
+                }
+            ]
+        },
+        {
+            "id": 92,
+            "title": "活动",
+            "color": "#50e3c2",
+            "earliestTime": 36,
+            "latestTime": 37,
+            "maxAppearanceTimes": 1,
+            "weight": 0.25,
+            "prerequisites": [
+                0,
+                "==",
+                0
+            ],
+            "text": "中秋节是上古天象崇拜——敬月习俗的遗痕，自古便有祭月、赏月等民俗，流传至今，经久不息。\n学院组织了中秋晚会...",
+            "effects": [],
+            "selections": [
+                {
+                    "prerequisites": true,
+                    "text": "参加",
+                    "effects": [
+                        {
+                            "possibility": 90,
+                            "assignment": [
+                                "$魅力",
+                                "+=",
+                                1
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "prerequisites": true,
+                    "text": "不参加",
+                    "effects": []
+                }
+            ]
+        },
+        {
+            "id": 94,
+            "title": "铁懒狗",
+            "color": "#4a90e2",
+            "earliestTime": 2,
+            "latestTime": 48,
+            "maxAppearanceTimes": 15,
+            "weight": 0.6,
+            "prerequisites": true,
+            "text": "早上七点，闹钟响起。\n你按掉闹钟，经过数千层的心理博弈，用尽全身力气，翻了个身，继续睡去。\n“总有人要摆烂，为什么不能是我呢？”",
+            "effects": [
+                {
+                    "possibility": 60,
+                    "assignment": [
+                        "$绩点",
+                        "+=",
+                        -1
+                    ]
+                },
+                {
+                    "possibility": 20,
+                    "assignment": [
+                        "$魅力",
+                        "+=",
+                        -1
+                    ]
+                }
+            ],
+            "selections": []
+        },
+        {
+            "id": 95,
+            "title": "事件",
+            "color": "#fc966e",
+            "earliestTime": 24,
+            "latestTime": 24,
+            "maxAppearanceTimes": 1,
+            "weight": 1,
+            "prerequisites": true,
+            "text": "距离期末考试还剩一个月时间。",
+            "effects": [],
+            "selections": [
+                {
+                    "prerequisites": true,
+                    "text": "开始复习",
+                    "effects": [
+                        {
+                            "possibility": 80,
+                            "assignment": [
+                                "$复习进度",
+                                "+=",
+                                1
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "prerequisites": true,
+                    "text": "不急",
+                    "effects": []
+                }
+            ]
+        },
+        {
+            "id": 96,
+            "title": "事件",
+            "color": "#fc966e",
+            "earliestTime": 9,
+            "latestTime": 9,
+            "maxAppearanceTimes": 1,
+            "weight": 1,
+            "prerequisites": true,
+            "text": "距离期末考试还剩一个月时间。",
+            "effects": [],
+            "selections": [
+                {
+                    "prerequisites": true,
+                    "text": "开始复习",
+                    "effects": [
+                        {
+                            "possibility": 80,
+                            "assignment": [
+                                "$复习进度",
+                                "+=",
+                                1
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "prerequisites": true,
+                    "text": "不急",
+                    "effects": []
+                }
+            ]
+        },
+        {
+            "id": 97,
+            "title": "事件",
+            "color": "#fc966e",
+            "earliestTime": 15,
+            "latestTime": 15,
+            "maxAppearanceTimes": 1,
+            "weight": 1,
+            "prerequisites": true,
+            "text": "距离期末考试还剩一个月时间。",
+            "effects": [],
+            "selections": [
+                {
+                    "prerequisites": true,
+                    "text": "开始复习",
+                    "effects": [
+                        {
+                            "possibility": 80,
+                            "assignment": [
+                                "$复习进度",
+                                "+=",
+                                1
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "prerequisites": true,
+                    "text": "不急",
+                    "effects": []
+                }
+            ]
+        },
+        {
+            "id": 98,
+            "title": "事件",
+            "color": "#fc966e",
+            "earliestTime": 30,
+            "latestTime": 30,
+            "maxAppearanceTimes": 1,
+            "weight": 1,
+            "prerequisites": true,
+            "text": "距离期末考试还剩一个月时间。",
+            "effects": [],
+            "selections": [
+                {
+                    "prerequisites": true,
+                    "text": "开始复习",
+                    "effects": [
+                        {
+                            "possibility": 80,
+                            "assignment": [
+                                "$复习进度",
+                                "+=",
+                                1
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "prerequisites": true,
+                    "text": "不急",
+                    "effects": []
+                }
+            ]
+        },
+        {
+            "id": 99,
+            "title": "事件",
+            "color": "#fc966e",
+            "earliestTime": 36,
+            "latestTime": 36,
+            "maxAppearanceTimes": 1,
+            "weight": 1,
+            "prerequisites": true,
+            "text": "距离期末考试还剩一个月时间。",
+            "effects": [],
+            "selections": [
+                {
+                    "prerequisites": true,
+                    "text": "开始复习",
+                    "effects": [
+                        {
+                            "possibility": 80,
+                            "assignment": [
+                                "$复习进度",
+                                "+=",
+                                1
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "prerequisites": true,
+                    "text": "不急",
+                    "effects": []
+                }
+            ]
+        },
+        {
+            "id": 100,
+            "title": "事件",
+            "color": "#fc966e",
+            "earliestTime": 42,
+            "latestTime": 42,
+            "maxAppearanceTimes": 1,
+            "weight": 1,
+            "prerequisites": true,
+            "text": "距离期末考试还剩一个月时间。",
+            "effects": [],
+            "selections": [
+                {
+                    "prerequisites": true,
+                    "text": "开始复习",
+                    "effects": [
+                        {
+                            "possibility": 80,
+                            "assignment": [
+                                "$复习进度",
+                                "+=",
+                                1
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "prerequisites": true,
+                    "text": "不急",
+                    "effects": []
+                }
+            ]
+        },
+        {
+            "id": 101,
+            "title": "放假",
+            "color": "#57669c",
+            "earliestTime": 11,
+            "latestTime": 11,
+            "maxAppearanceTimes": 1,
+            "weight": 100,
+            "prerequisites": true,
+            "text": "放假了。\n一个学期匆匆过去。\n放下压力，给自己一点喘息的时间吧。",
+            "effects": [
+                {
+                    "possibility": 100,
+                    "assignment": [
+                        "$复习进度",
+                        "=",
+                        0
+                    ]
+                }
+            ],
+            "selections": []
+        },
+        {
+            "id": 102,
+            "title": "放假",
+            "color": "#57669c",
+            "earliestTime": 17,
+            "latestTime": 17,
+            "maxAppearanceTimes": 1,
+            "weight": 100,
+            "prerequisites": true,
+            "text": "放假了。\n一个学期匆匆过去。\n放下压力，给自己一点喘息的时间吧。",
+            "effects": [
+                {
+                    "possibility": 100,
+                    "assignment": [
+                        "$复习进度",
+                        "=",
+                        0
+                    ]
+                }
+            ],
+            "selections": []
+        },
+        {
+            "id": 103,
+            "title": "放假",
+            "color": "#57669c",
+            "earliestTime": 23,
+            "latestTime": 23,
+            "maxAppearanceTimes": 1,
+            "weight": 100,
+            "prerequisites": true,
+            "text": "放假了。\n一个学期匆匆过去。\n放下压力，给自己一点喘息的时间吧。",
+            "effects": [
+                {
+                    "possibility": 100,
+                    "assignment": [
+                        "$复习进度",
+                        "=",
+                        0
+                    ]
+                }
+            ],
+            "selections": []
+        },
+        {
+            "id": 104,
+            "title": "放假",
+            "color": "#57669c",
+            "earliestTime": 29,
+            "latestTime": 29,
+            "maxAppearanceTimes": 1,
+            "weight": 100,
+            "prerequisites": true,
+            "text": "放假了。\n一个学期匆匆过去。\n放下压力，给自己一点喘息的时间吧。",
+            "effects": [
+                {
+                    "possibility": 100,
+                    "assignment": [
+                        "$复习进度",
+                        "=",
+                        0
+                    ]
+                }
+            ],
+            "selections": []
+        },
+        {
+            "id": 105,
+            "title": "放假",
+            "color": "#57669c",
+            "earliestTime": 35,
+            "latestTime": 35,
+            "maxAppearanceTimes": 1,
+            "weight": 100,
+            "prerequisites": true,
+            "text": "放假了。\n一个学期匆匆过去。\n放下压力，给自己一点喘息的时间吧。",
+            "effects": [
+                {
+                    "possibility": 100,
+                    "assignment": [
+                        "$复习进度",
+                        "=",
+                        0
+                    ]
+                }
+            ],
+            "selections": []
+        },
+        {
+            "id": 106,
+            "title": "放假",
+            "color": "#57669c",
+            "earliestTime": 41,
+            "latestTime": 41,
+            "maxAppearanceTimes": 1,
+            "weight": 100,
+            "prerequisites": true,
+            "text": "放假了。\n一个学期匆匆过去。\n放下压力，给自己一点喘息的时间吧。",
+            "effects": [
+                {
+                    "possibility": 100,
+                    "assignment": [
+                        "$复习进度",
+                        "=",
+                        0
+                    ]
+                }
+            ],
+            "selections": []
+        },
+        {
+            "id": 107,
+            "title": "新学期开始",
+            "color": "#57669c",
+            "earliestTime": 12,
+            "latestTime": 12,
+            "maxAppearanceTimes": 1,
+            "weight": 100,
+            "prerequisites": true,
+            "text": "开学了。\n假期的时光总是很短暂。\n你舍不得每个自然醒的早晨，舍不得老家的饭菜，舍不得故乡的挚友，舍不得没有压力的假期...\n但时间永不停歇，背上行囊，开启新的学期。",
+            "effects": [
+                {
+                    "possibility": 100,
+                    "assignment": [
+                        "$复习进度",
+                        "=",
+                        0
+                    ]
+                },
+                {
+                    "possibility": 100,
+                    "assignment": [
+                        "$钱包",
+                        "=",
+                        2000
+                    ]
+                }
+            ],
+            "selections": []
+        },
+        {
+            "id": 108,
+            "title": "新学期开始",
+            "color": "#57669c",
+            "earliestTime": 18,
+            "latestTime": 18,
+            "maxAppearanceTimes": 1,
+            "weight": 100,
+            "prerequisites": true,
+            "text": "开学了。\n假期的时光总是很短暂。\n你舍不得每个自然醒的早晨，舍不得老家的饭菜，舍不得故乡的挚友，舍不得没有压力的假期...\n但时间永不停歇，背上行囊，开启新的学期。",
+            "effects": [
+                {
+                    "possibility": 100,
+                    "assignment": [
+                        "$复习进度",
+                        "=",
+                        0
+                    ]
+                },
+                {
+                    "possibility": 100,
+                    "assignment": [
+                        "$钱包",
+                        "=",
+                        2000
+                    ]
+                }
+            ],
+            "selections": []
+        },
+        {
+            "id": 109,
+            "title": "新学期开始",
+            "color": "#57669c",
+            "earliestTime": 24,
+            "latestTime": 24,
+            "maxAppearanceTimes": 1,
+            "weight": 100,
+            "prerequisites": true,
+            "text": "开学了。\n假期的时光总是很短暂。\n你舍不得每个自然醒的早晨，舍不得老家的饭菜，舍不得故乡的挚友，舍不得没有压力的假期...\n但时间永不停歇，背上行囊，开启新的学期。",
+            "effects": [
+                {
+                    "possibility": 100,
+                    "assignment": [
+                        "$复习进度",
+                        "=",
+                        0
+                    ]
+                },
+                {
+                    "possibility": 100,
+                    "assignment": [
+                        "$钱包",
+                        "=",
+                        2000
+                    ]
+                }
+            ],
+            "selections": []
+        },
+        {
+            "id": 110,
+            "title": "新学期开始",
+            "color": "#57669c",
+            "earliestTime": 30,
+            "latestTime": 30,
+            "maxAppearanceTimes": 1,
+            "weight": 100,
+            "prerequisites": true,
+            "text": "开学了。\n假期的时光总是很短暂。\n你舍不得每个自然醒的早晨，舍不得老家的饭菜，舍不得故乡的挚友，舍不得没有压力的假期...\n但时间永不停歇，背上行囊，开启新的学期。",
+            "effects": [
+                {
+                    "possibility": 100,
+                    "assignment": [
+                        "$复习进度",
+                        "=",
+                        0
+                    ]
+                },
+                {
+                    "possibility": 100,
+                    "assignment": [
+                        "$钱包",
+                        "=",
+                        2000
+                    ]
+                }
+            ],
+            "selections": []
+        },
+        {
+            "id": 111,
+            "title": "新学期开始",
+            "color": "#57669c",
+            "earliestTime": 36,
+            "latestTime": 36,
+            "maxAppearanceTimes": 1,
+            "weight": 100,
+            "prerequisites": true,
+            "text": "开学了。\n假期的时光总是很短暂。\n你舍不得每个自然醒的早晨，舍不得老家的饭菜，舍不得故乡的挚友，舍不得没有压力的假期...\n但时间永不停歇，背上行囊，开启新的学期。",
+            "effects": [
+                {
+                    "possibility": 100,
+                    "assignment": [
+                        "$复习进度",
+                        "=",
+                        0
+                    ]
+                },
+                {
+                    "possibility": 100,
+                    "assignment": [
+                        "$钱包",
+                        "=",
+                        2000
+                    ]
+                }
+            ],
+            "selections": []
+        },
+        {
+            "id": 112,
+            "title": "新学期开始",
+            "color": "#57669c",
+            "earliestTime": 42,
+            "latestTime": 42,
+            "maxAppearanceTimes": 1,
+            "weight": 100,
+            "prerequisites": true,
+            "text": "开学了。\n假期的时光总是很短暂。\n这将是你在大学的最后一个学期。\n但时间永不停歇，背上行囊，开启新的学期。",
+            "effects": [
+                {
+                    "possibility": 100,
+                    "assignment": [
+                        "$复习进度",
+                        "=",
+                        0
+                    ]
+                },
+                {
+                    "possibility": 100,
+                    "assignment": [
+                        "$钱包",
+                        "=",
+                        2000
+                    ]
+                }
+            ],
+            "selections": []
+        },
+        {
+            "id": 113,
+            "title": "表白",
+            "color": "#4a90e2",
+            "earliestTime": 0,
+            "latestTime": 48,
+            "maxAppearanceTimes": false,
+            "weight": 0,
+            "prerequisites": true,
+            "text": "你鼓起勇气，向他/她袒露心声。",
+            "effects": [],
+            "selections": [],
+            "directTo": 73
+        }
+    ],
+    "variables": [
+        {
+            "name": "$人缘",
+            "initialValue": 0,
+            "comment": "",
+            "color": "#00adff",
+            "prevName": "$ren'yuan"
+        },
+        {
+            "name": "$工作能力",
+            "initialValue": 0,
+            "prevName": "$工作能力",
+            "comment": "",
+            "color": "#7ed321"
+        },
+        {
+            "name": "$绩点",
+            "initialValue": 0,
+            "prevName": "$ji'dian",
+            "color": "#50e3c2"
+        },
+        {
+            "name": "$同学A",
+            "initialValue": 0,
+            "prevName": "$同学",
+            "color": "#f5a623"
+        },
+        {
+            "name": "$单身",
+            "initialValue": 1,
+            "prevName": "$单身",
+            "color": "#d0021b"
+        },
+        {
+            "name": "$竞选",
+            "initialValue": 0,
+            "prevName": "$jing'xuan",
+            "color": "#bd10e0"
+        },
+        {
+            "name": "$活动",
+            "initialValue": 0,
+            "prevName": "$活动",
+            "color": "#e68787"
+        },
+        {
+            "name": "$概率",
+            "initialValue": 0,
+            "prevName": "$gai'lü"
+        },
+        {
+            "name": "$感情",
+            "initialValue": 0,
+            "prevName": "$感情",
+            "color": "#d0021b"
+        },
+        {
+            "name": "$魅力",
+            "initialValue": 0,
+            "prevName": "$魅力",
+            "color": "#e2aeb6"
+        },
+        {
+            "name": "$复习进度",
+            "initialValue": 0,
+            "prevName": "$复习jin'du",
+            "color": "#000000"
+        },
+        {
+            "name": "$参加学生会",
+            "initialValue": 0,
+            "prevName": "$参加xue'sheng'hui",
+            "color": "#f8e71c"
+        },
+        {
+            "name": "$转专业",
+            "initialValue": 0,
+            "prevName": "$zhuan'zhuan'ye"
+        },
+        {
+            "name": "$四级",
+            "initialValue": 0,
+            "prevName": "$si'ji"
+        },
+        {
+            "name": "$六级",
+            "initialValue": 0,
+            "prevName": "$liu'ji"
+        },
+        {
+            "name": "$谈过女朋友",
+            "initialValue": 0,
+            "prevName": "$谈过nü'peng'y"
+        },
+        {
+            "name": "$钱包",
+            "initialValue": 2000,
+            "prevName": "$钱包"
+        },
+        {
+            "name": "$疫情",
+            "initialValue": 0,
+            "prevName": "$yi'q"
+        },
+        {
+            "name": "$参加",
+            "initialValue": 0,
+            "prevName": "$can'jia"
+        },
+        {
+            "name": "$寝室矛盾",
+            "initialValue": 0,
+            "prevName": "$qin'shi'mao'dun"
+        },
+        {
+            "name": "$偶遇",
+            "initialValue": 0,
+            "prevName": "$ou'yu"
+        },
+        {
+            "name": "$暧昧",
+            "initialValue": 0,
+            "prevName": "$ai'm"
+        },
+        {
+            "name": "$表白",
+            "initialValue": 0,
+            "prevName": "$biao'bai"
+        }
+    ]
+}

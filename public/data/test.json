@@ -1,0 +1,285 @@
+{
+	"version": "1.0",
+	"lastEdit": "",
+	"nodes": [
+		{
+			"id": 1,
+			"title": "节点的标题",
+			"color": "#ffb71c",
+			"tags": [
+				"测试",
+				"节点",
+				"Love"
+			],
+			"earliestTime": 12,
+			"latestTime": 24,
+			"maxAppearanceTimes": 1,
+			"weight": 0.8,
+			"prerequisites": [
+				[
+					[
+						1,
+						"<=",
+						2
+					],
+					"AND",
+					true
+				],
+				"OR",
+				[
+					"NOT",
+					[
+						5,
+						"!=",
+						5
+					]
+				]
+			],
+			"text": "这是这里的测试文本，最终会呈现在界面中供用户操作；可以写剧情文本，也可以用来写问句并在下面跟上对应的选项。祝你玩的开心！",
+			"effects": [
+				{
+					"possibility": 0.2,
+					"assignment": [
+						"$VAR",
+						"=",
+						123
+					]
+				},
+				{
+					"possibility": 0.2,
+					"assignment": [
+						"$VAR",
+						"+=",
+						2
+					]
+				}
+			],
+			"selections": [
+				{
+					"text": "选项1",
+					"prerequisites": true,
+					"effects": [
+						{
+							"possibility": 100,
+							"assignment": [
+								"$",
+								"=",
+								0
+							]
+						}
+					]
+				},
+				{
+					"text": "选项2",
+					"prerequisites": true,
+					"effects": []
+				},
+				{
+					"text": "选项3",
+					"prerequisites": true,
+					"effects": []
+				}
+			],
+			"directTo": 2,
+			"connectTo": 3
+		},
+		{
+			"id": 2,
+			"title": "测试节点",
+			"color": "#1cbfff",
+			"tags": [
+				"测试",
+				"节点",
+				"Love"
+			],
+			"earliestTime": 12,
+			"latestTime": 24,
+			"maxAppearanceTimes": 1,
+			"weight": 0.8,
+			"prerequisites": true,
+			"text": "只有一句话的效果",
+			"effects": [
+				{
+					"possibility": 100,
+					"assignment": [
+						"$",
+						"=",
+						0
+					]
+				}
+			],
+			"selections": [
+				{
+					"prerequisites": [
+						[
+							1,
+							"==",
+							0
+						],
+						"AND",
+						[
+							2,
+							"==",
+							0
+						]
+					],
+					"text": "选项一的文本是这样的",
+					"effects": []
+				},
+				{
+					"prerequisites": [
+						[
+							[
+								0,
+								"==",
+								0
+							],
+							"OR",
+							true
+						],
+						"AND",
+						[
+							true,
+							"OR",
+							true
+						]
+					],
+					"text": "选项二的文本是这样的",
+					"effects": []
+				}
+			],
+			"directTo": 2,
+			"connectTo": 3
+		},
+		{
+			"id": 5,
+			"title": "测试节点",
+			"color": "#1cbfff",
+			"tags": [
+				"测试",
+				"节点",
+				"Love"
+			],
+			"earliestTime": 12,
+			"latestTime": 24,
+			"maxAppearanceTimes": 1,
+			"weight": 0.8,
+			"prerequisites": true,
+			"text": "只有一句话的效果",
+			"effects": [
+				{
+					"possibility": 100,
+					"assignment": [
+						"$",
+						"=",
+						0
+					]
+				}
+			],
+			"selections": [
+				{
+					"prerequisites": [
+						[
+							1,
+							"==",
+							0
+						],
+						"AND",
+						[
+							2,
+							"==",
+							0
+						]
+					],
+					"text": "选项一的文本是这样的",
+					"effects": []
+				},
+				{
+					"prerequisites": [
+						[
+							[
+								0,
+								"==",
+								0
+							],
+							"OR",
+							true
+						],
+						"AND",
+						[
+							true,
+							"OR",
+							true
+						]
+					],
+					"text": "选项二的文本是这样的",
+					"effects": []
+				}
+			],
+			"directTo": 2,
+			"connectTo": 3
+		}
+	],
+	"variables": [
+		{
+			"name": "$VAR",
+			"initialValue": 0,
+			"comment": "这是一个用来测试的向量",
+			"color": "#00aeff"
+		},
+		{
+			"name": "$variableName",
+			"initialValue": 0,
+			"comment": "变量名还可以这么起",
+			"color": "#ffaa00"
+		},
+		{
+			"name": "$DianaCannotEatSpicyFood",
+			"initialValue": 0,
+			"comment": "可是蒂娜我吃不了辣辣的东西",
+			"color": "#a36c3d"
+		},
+		{
+			"name": "$1",
+			"initialValue": 0,
+			"prevName": "$1",
+			"color": "#00df20"
+		},
+		{
+			"name": "$2",
+			"initialValue": 0,
+			"prevName": "$2",
+			"color": "#b3adcc"
+		},
+		{
+			"name": "$3",
+			"initialValue": 0,
+			"prevName": "$3",
+			"color": "#3bcaae"
+		},
+		{
+			"name": "$4",
+			"initialValue": 0,
+			"prevName": "$4",
+			"color": "#ee3790"
+		},
+		{
+			"name": "$5",
+			"initialValue": 0,
+			"prevName": "$5",
+			"color": "#e256e2"
+		},
+		{
+			"name": "$6",
+			"initialValue": 0,
+			"prevName": "$6",
+			"color": "#c3c3c3"
+		},
+		{
+			"name": "$7",
+			"initialValue": 0,
+			"prevName": "$7",
+			"color": "#917ffa"
+		}
+	]
+}

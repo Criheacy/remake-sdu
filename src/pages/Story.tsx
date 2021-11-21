@@ -7,7 +7,7 @@ import {SelectionType} from "../@types/story";
 import useVariable from "../utils/variable";
 
 const StoryPage = () => {
-  const [story, currentNode, currentTime, {getNextNode, doEffects}] = useStory();
+  const [, currentNode, currentTime, {getNextNode, doEffects}] = useStory();
   const [display, optionsDisplay, switchDisplay] = useNodeSwitcher();
   const [variables] = useVariable();
 
